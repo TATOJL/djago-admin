@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="shortcut icon" href="statics/images/logo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <!-- 靜態資料 -->
+ <link rel="stylesheet" href="statics/css/base.css">
+  <link rel="stylesheet" href="statics/css/signup.css">
+  <script src="statics/js/eye.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+ 
+<!-- 背景圖片 -->
+<style>
+.page-1 {
+    height: 100vh;
+    background-image: url(statics/images/sand.jpg);
+    background-size: cover;
+    position: relative;
+  }
+  /* .page-2 {
+    height: 100vh;
+    background: url(statics/images/sea.jpg);
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    position: relative;
+  } */
+  </style>
+<body>
+
+     <!--頁首 -->
+     <div class="header">
+      <input type="checkbox" id="mobile-menu-switch-checkbox">
+      <div class="container wow animate__animated animate__bounceInLeft">
+          <div>
+            <h1>
+              <img src="statics/images/logo.png" style="width: 50px; height: 50px;"/>
+              <span style="font-size:30px;"><b>Neuromancer</b></span>
+            </h1>
+          </div>
+          <div class="menu">
+              <ul class="wow animate__animated animate__bounceIn animate__delay-1s">
+                <li>
+                    <a href="/"  onclick="doCloseMenu()">
+                        <div class="en">Home</div>
+                        <div class="tw"><i class="fa fa-house-chimney fa-xl"></i>&nbsp; 回首頁</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/login.html" onclick="doCloseMenu()">
+                        <div class="en">login</div>
+                        <div class="tw"><i class="fa fa-right-to-bracket fa-xl"></i>&nbsp; 登入</div>
+                    </a>
+                </li>
+              </ul>
+          </div>
+          <div class="mobile-menu-switch wow animate__animated animate__bounceIn animate__delay-1s">
+              <label for="mobile-menu-switch-checkbox" class="open-icon">
+                  <span class="iconify" data-icon="ant-design:menu-outlined"></span>
+              </label>
+              <label for="mobile-menu-switch-checkbox" class="close-icon">
+                  <span class="iconify" data-icon="ci:close-big"></span>
+              </label>
+          </div>
+      </div>
+  </div> 
+
+
+     <!-- 內容 -->
+  <div class="page-1 text-center main" style="padding-top: 100px; height: 100vh;">
+    <main class="form-signup">
+      <form method=post action="" autocomplete="off">
+        <p><img src="statics/images/logo.png" alt="logo" width="50" height="50"></p>
+        <h1 class="h3 mb-3 fw-normal"><b>會員註冊</b> </h1>
+        <!-- 帳號輸入框 -->
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <span class="input-group-text">
+              <i class="fa fa-user"></i>
+            </span>
+            <div class="form-floating" style=" width: 263px;">
+              <input type="text" name="account" class="form-control" placeholder="請輸入帳號" required>
+              <label for="floatingInput">請輸入帳號</label>
+            </div>
+          </div>
+        </div>
+        <!-- 密碼輸入框 -->
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <span class="input-group-text">
+              <i class="fa fa-lock"></i>
+            </span>
+            <div class="form-floating" style=" width: 221px;">
+              <input type="password" name="password" class="pwd form-control" placeholder="請輸入密碼" required>
+              <label for="floatingInput">請輸入密碼</label>
+            </div>
+            <span class="input-group-text ">
+              <a style="color: black;" onclick="show()">
+                <i class="fa fa-eye-slash icon"></i>
+              </a>
+            </span>
+          </div>
+        </div>
+        <!-- 確認密碼輸入框 -->
+        <div class="form-group">
+            <div class="input-group mb-3">
+              <span class="input-group-text">
+                <i class="fa fa-lock"></i>
+              </span>
+              <div class="form-floating" style=" width: 221px;">
+                <input type="password" name="password2" class="pwd2 form-control" placeholder="請再次輸入密碼" required>
+                <label for="floatingInput">請再次輸入密碼</label>
+              </div>
+              <span class="input-group-text ">
+                <a style="color: black;" onclick="show2()">
+                  <i class="fa fa-eye-slash icon2"></i>
+                </a>
+              </span>
+            </div>
+          </div>
+       
+        <!-- email輸入框 -->
+        <div class="form-group">
+          <div class="input-group mb-3 mt-3">
+            <span class="input-group-text">
+              <i class="fa fa-envelope"></i>
+            </span>
+            <div class="form-floating" style=" width: 261px;">
+              <input type="email" name="email" class="form-control" placeholder="請輸入email" required>
+              <label for="floatingInput">請輸入email</label>
+            </div>
+          </div>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">註冊</button>
+
+      </form>
+
+    </main>
+  </div>
+     
+
+    <!-- 頁尾 -->
+<div class="footer">
+  <div class="container">
+      <h1>
+          <img src="statics/images/logo.png" style="width: 50px; height: 50px;"/>
+          <span style="font-size:30px;"><b>Neuromancer</b></span>
+      </h1>
+      <div>&copy; Neuromancer</div>
+  </div>
+</div>
+
+  
+   
+
+    
+</body>
+<script src="statics/js/wow.min.js"></script>
+<script>
+    new WOW().init();
+    function doCloseMenu() {
+        document.querySelector('#mobile-menu-switch-checkbox').checked = false;
+    }
+</script>
+
+
++ JavaScript(jQuery)
+<button type="button" id="BackTop" class="toTop-arrow"></button>
+<script>
+$(function(){
+	$('#BackTop').click(function(){ 
+		$('html,body').animate({scrollTop:0}, 333);
+	});
+	$(window).scroll(function() {
+		if ( $(this).scrollTop() > 300 ){
+			$('#BackTop').fadeIn(222);
+		} else {
+			$('#BackTop').stop().fadeOut(222);
+		}
+	}).scroll();
+});
+</script>
+ <!-- 回到最上層 -->
+<button type="button" id="BackTop" class="toTop-arrow"></button>
+<script>
+$(function(){
+	$('#BackTop').click(function(){ 
+		$('html,body').animate({scrollTop:0}, 333);
+	});
+	$(window).scroll(function() {
+		if ( $(this).scrollTop() > 300 ){
+			$('#BackTop').fadeIn(222);
+		} else {
+			$('#BackTop').stop().fadeOut(222);
+		}
+	}).scroll();
+});
+</script>
+</html>
+
+
+
