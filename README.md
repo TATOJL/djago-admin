@@ -8,7 +8,7 @@
  model
 </h1>
 
-- ### model.py宣告一個類別，建立資料表用以寫到資料庫:
+- ### models.py宣告一個類別，建立資料表用以寫到資料庫:
 ```py
 
 from django.db import models
